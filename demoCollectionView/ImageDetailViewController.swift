@@ -13,10 +13,13 @@ class ImageDetailViewController: UIViewController,UIScrollViewDelegate {
     var imageURL:String = ""
     var scrollView = UIScrollView()
     var imageView = UIImageView()
+    var deviceHeight:CGFloat = 0
+    var tabBarheight:CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        deviceHeight = view.bounds.height
+        tabBarheight = navigationController!.navigationBar.frame.height
         scrollView.delegate = self
         
         setUpView()
@@ -42,7 +45,7 @@ class ImageDetailViewController: UIViewController,UIScrollViewDelegate {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: -tabBarheight).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
@@ -60,7 +63,9 @@ class ImageDetailViewController: UIViewController,UIScrollViewDelegate {
         imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1).isActive = true
         imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
         
+//        imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFit
+//        imageView.backgroundColor = .red
         
         imageView.image = UIImage(named: "img_image")
     }

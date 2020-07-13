@@ -16,6 +16,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var spacing:CGFloat = 3
     
     var dataImage:[Image] = [
+//        1
         Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
         Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
         Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
@@ -23,14 +24,49 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
         Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
         Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+//        2
+        Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
+        Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+        Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
+        Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+//        3
+        Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
+        Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+        Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
+        Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+//        4
+        Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
+        Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+        Image(pathURL: "https://s3.amazonaws.com/com.marvel.terrigen/prod/captainmarvel_lob_crd_06.jpg"),
+        Image(pathURL: "https://i.annihil.us/u/prod/marvel/i/mg/f/00/5ee2a0bcdf590.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
+        Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg"),
+        Image(pathURL: "https://nie.res.netease.com/r/pic/20190527/3abb27b4-0506-4961-981c-94b029157ce2.jpg"),
         Image(pathURL: "https://cdn.mos.cms.futurecdn.net/xGwDeehYUPAaTZqSeuHUv8.jpg")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        deviceWidth = view.layer.frame.width
-        deviceHeight = view.layer.frame.height
+        deviceWidth = view.bounds.width
+        deviceHeight = view.bounds.height
         
         myCV.delegate = self
         myCV.dataSource = self
@@ -48,6 +84,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myCV.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! itemCollectionViewCell
+        cell.myIMG.image = nil
+        cell.myIMG.image = UIImage(named: "img_image")
         let queue = DispatchQueue(label: "loadImage")
         queue.async {
             let url = URL(string: self.dataImage[indexPath.row].pathURL!)

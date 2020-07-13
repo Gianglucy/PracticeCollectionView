@@ -11,10 +11,13 @@ import UIKit
 class itemCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var myIMG: UIImageView!
+    var myLable = UILabel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         myIMG.image = UIImage(named: "img_image")
         myIMG.contentMode = .scaleToFill
+        
+        
     }
 }
